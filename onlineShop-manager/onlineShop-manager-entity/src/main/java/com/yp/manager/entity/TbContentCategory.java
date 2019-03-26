@@ -1,8 +1,10 @@
 package com.yp.manager.entity;
 
+import java.awt.SecondaryLoop;
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbContentCategory {
+public class TbContentCategory implements Serializable {
     private Long id;
 
     private Long parentId;

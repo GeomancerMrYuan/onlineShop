@@ -15,7 +15,6 @@
         <module>onlineShop-manager-entity</module>
         <module>onlineShop-manager-dao</module>
         <module>onlineShop-manager-service</module>
-        <module>onlineShop-manager-controller</module>
         <module>onlineShop-manager-interface</module>
     </modules>
     <dependencies>

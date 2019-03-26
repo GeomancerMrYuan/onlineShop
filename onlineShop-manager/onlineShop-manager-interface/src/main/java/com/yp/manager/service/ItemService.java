@@ -1,5 +1,6 @@
 package com.yp.manager.service;
 
+import com.yp.common.vo.EasyUIDataGridResult;
 import com.yp.manager.entity.TbItem;
 
 /**
@@ -11,4 +12,6 @@ import com.yp.manager.entity.TbItem;
 public interface ItemService {
 
     TbItem getItemById(Long itemId);
+
+    EasyUIDataGridResult getItemList(Integer page, Integer rows);
 }

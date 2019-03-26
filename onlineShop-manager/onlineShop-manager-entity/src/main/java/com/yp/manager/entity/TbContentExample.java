@@ -1,10 +1,13 @@
 package com.yp.manager.entity;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-public class TbContentExample {
+@Data
+public class TbContentExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;
