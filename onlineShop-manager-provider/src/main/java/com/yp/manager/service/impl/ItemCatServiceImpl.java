@@ -1,7 +1,6 @@
 package com.yp.manager.service.impl;
 
 import com.yp.common.entity.TbItemCat;
-import com.yp.common.entity.TbItemCatExample;
 import com.yp.common.service.ItemCatService;
 import com.yp.common.vo.EasyUITreeNode;
 import com.yp.manager.dao.TbItemCatMapper;
@@ -25,10 +24,8 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Override
     public List<EasyUITreeNode> getCatList(long parentId) {
         // 1、根据 parentId 查询节点列表
-        TbItemCatExample example = new TbItemCatExample(); //设置查询条件
-        TbItemCatExample.Criteria criteria = example.createCriteria();
-        criteria.andParentIdEqualTo(parentId);
-        List<TbItemCat> list = tbItemCatMapper.selectByExample(example);
+
+        List<TbItemCat> list = tbItemCatMapper.getTbItemCatListByParentId(parentId);
         // 2、转换成 EasyUITreeNode 列表。
         List<EasyUITreeNode> resultList = new ArrayList<>();
         for (TbItemCat tbItemCat : list) {

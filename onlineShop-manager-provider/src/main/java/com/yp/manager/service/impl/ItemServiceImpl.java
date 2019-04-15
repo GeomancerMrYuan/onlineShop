@@ -3,7 +3,6 @@ package com.yp.manager.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.yp.common.entity.TbItem;
-import com.yp.common.entity.TbItemExample;
 import com.yp.common.service.ItemService;
 import com.yp.common.vo.EasyUIDataGridResult;
 import com.yp.manager.dao.TbItemMapper;
@@ -26,7 +25,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public TbItem getItemById(Long itemId) {
-        TbItem item = itemMapper.selectByPrimaryKey(itemId);
+        TbItem item = itemMapper.getTbItem(itemId);
         return item;
     }
 
@@ -34,9 +33,9 @@ public class ItemServiceImpl implements ItemService {
     public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
         //设置分页信息
         PageHelper.startPage(page, rows);
-        //执行查询
-        TbItemExample example = new TbItemExample();
-        List<TbItem> list = itemMapper.selectByExample(example); //取分页信息
+        //执行查询所有
+        List<TbItem> list = itemMapper.getTbItemList();
+        //取分页信息
         PageInfo<TbItem> pageInfo = new PageInfo<>(list);
         //创建返回结果对象
         EasyUIDataGridResult result = new EasyUIDataGridResult();

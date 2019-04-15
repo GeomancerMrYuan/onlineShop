@@ -12,6 +12,7 @@
         <module>onlineShop-common</module>
         <module>onlineShop-manager-provider</module>
         <module>onlineShop-manager-web</module>
+        <module>onlineShop-mybatis-generator</module>
     </modules>
     <!-- 集中定义依赖版本号 -->
     <properties>
@@ -23,6 +24,7 @@
         <mysql.version>5.1.32</mysql.version>
         <slf4j.version>1.6.4</slf4j.version>
         <jackson.version>2.4.2</jackson.version>
+        <fastjson.version>1.2.4</fastjson.version>
         <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
         <jstl.version>1.2</jstl.version>
@@ -44,6 +46,7 @@
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
         <lombok.version>1.16.20</lombok.version>
+        <fastdfs.version>1.27.0.0</fastdfs.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -69,11 +72,16 @@
                 <artifactId>commons-net</artifactId>
                 <version>${commons-net.version}</version>
             </dependency>
-            <!-- Jackson Json处理工具包 -->
+            <!-- Json处理工具包 -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
             <!-- httpclient -->
             <dependency>
@@ -236,6 +244,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.oschina.zcx7878</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs.version}</version>
             </dependency>
 
         </dependencies>
