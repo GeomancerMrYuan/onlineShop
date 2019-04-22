@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Date 2019/4/9
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:spring/springmvc.xml")
+@ContextConfiguration(locations="classpath:springs/springmvc.xml")
 public class FastDFSTest {
 
     @Value("${IMAGE_SERVER_URL}")
