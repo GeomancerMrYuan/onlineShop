@@ -29,4 +29,6 @@ public class ItemCatController {
         List<EasyUITreeNode> result = itemCatService.getCatList(parentId);
         return result;
     }
+
+
 }

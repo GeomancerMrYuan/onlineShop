@@ -20,7 +20,7 @@ public class Generator {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         /**指向逆向工程配置文件*/
-        File configFile = new File("/Users/mryuan/IdeaProjects/onlineShop/onlineShop-mybatis-generator/src/main/resources/generationConfig.xml");
+        File configFile = new File("/Users/yuanpeng/IdeaProjects/onlineShop/onlineShop-mybatis-generator/src/main/resources/generationConfig.xml");
         ConfigurationParser parser = new ConfigurationParser(warnings);
         Configuration config = parser.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);

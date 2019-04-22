@@ -21,5 +21,15 @@ public interface TbItemMapper {
      */
     List<TbItem> getTbItemList();
 
+    /**
+     * 3.新增商品
+     * @param item
+     */
+    void insertTbItem(TbItem item);
 
+    /**
+     * 4.更新商品
+     * @param item
+     */
+    void updateItem(TbItem item);
 }

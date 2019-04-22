@@ -8,9 +8,16 @@ import java.util.List;
 
 public interface TbItemDescMapper {
 
-
+    /**
+     * 1.新增商品详情
+     * @param record
+     * @return
+     */
     int insert(TbItemDesc record);
 
-    int insertSelective(TbItemDesc record);
-
+    /**
+     * 2.更新商品详情
+     * @param tbItemDesc
+     */
+    void update(TbItemDesc tbItemDesc);
 }
